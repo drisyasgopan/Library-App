@@ -1,0 +1,62 @@
+<!-- <app-header></app-header> -->
+<div class="container py-3">
+    <div class="card" *ngFor="let i for books">
+      <div class="row ">
+        <div class="col-md-4">
+            <img class="rounded-circle"  [src]="i.imageUrl" alt="image"class="w-100">
+          </div>
+          <div class="col-md-8 px-3">
+            <div class="card-block px-3">
+              <h4 class="card-title" >{{i.title}}</h4>
+              <br> 
+              <h3 class="card-author">{{i.author}}</h3>
+             
+              <hr>
+              <p class="card-text">{{i.about}}</p>
+
+              <form action="/books/edit" method="POST">
+              <input type="hidden" name="id" value="">
+              <button id="editbtn" type="submit" class = "btn btn-success btn-sm" style="float: right;">Update</button>
+              </form>
+
+              <form action="/books/delete" method="POST">
+              <input type="hidden" name="id" value="">
+              <button id="dltbtn" type="submit" class = "btn btn-danger btn-sm" style="float: right; margin-right: 25px">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+    <div class="container py-3">
+        <div class="card">
+          <div class="row ">
+            <div class="col-md-4">
+              <img class="rounded-circle"  src="" class="w-100">
+              </div>
+              <div class="col-md-8 px-3">
+                <div class="card-block px-3">
+                  <h4 class="card-title"></h4>
+                  Book Name :
+                  <br>
+                  <h3 class="card-author"></h3>
+                  Author :
+                  <hr>
+                  <p class="card-text">Description</p>
+    
+                  <form action="/books/edit" method="POST">
+                  <input type="hidden" name="id" value="">
+                  <button id="editbtn" type="submit" class = "btn btn-success btn-sm" style="float: right;">Update</button>
+                  </form>
+    
+                  <form action="/books/delete" method="POST">
+                  <input type="hidden" name="id" value="">
+                  <button id="dltbtn" type="submit" class = "btn btn-danger btn-sm" style="float: right; margin-right: 25px">Delete</button>
+                  </form>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </div>
+
